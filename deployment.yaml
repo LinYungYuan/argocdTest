@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cub-nginx-deployment
+  labels:
+    app: cub-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cub-nginx
+  template:
+    metadata:
+      labels:
+        app: cub-nginx
+    spec:
+      containers:
+      - name: cub-nginx
+        image: bonexd/cub-nginx:latest
+        ports:
+        - containerPort: 80
