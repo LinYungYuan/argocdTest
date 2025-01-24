@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: cub-nginx
-        image: bonexd/cub-nginx:latest
+        image: bonexd/cub-nginx:stable-dbproxy
         ports:
         - containerPort: 80
